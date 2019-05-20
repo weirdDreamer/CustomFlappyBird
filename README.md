@@ -10,4 +10,4 @@ Założenia:
 - cObstacle
 
 
-Sterowanie, Instrukcja sterowania
+Dodać: sterowanie, instrukcja sterowania
