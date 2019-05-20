@@ -11,3 +11,5 @@ Założenia:
 
 
 Dodać: sterowanie, instrukcja sterowania
+Do środy:opis
+Do poniedziałku: pliki nagłówkowe
