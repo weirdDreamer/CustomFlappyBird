@@ -4,3 +4,7 @@ Założenia:
 - [x] flappy bird,
 - [ ] dodatkowe poziomy,
 >Wszystkie praw autorskie należą do ich prawowitego właściciela. To jest tylko projekt na zaliczenie
+
+### Klasy 
+- cBird
+- cObstacle
