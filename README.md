@@ -8,3 +8,6 @@ Założenia:
 ### Klasy 
 - cBird
 - cObstacle
+
+
+Sterowanie, Instrukcja sterowania
