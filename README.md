@@ -3,7 +3,7 @@ Gra w której klikając sprawiamy że tytułowy ptaszek podskakuje. Najego trasi
 Założenia:
 - [x] flappy bird,
 - [ ] dodatkowe poziomy,
->Wszystkie praw autorskie należą do ich prawowitego właściciela. To jest tylko projekt na zaliczenie
+>Wszystkie praw autorskie należą do ich prawowitego właściciela. To jest projekt na zaliczenie
 
 ### Klasy 
 - cBird
