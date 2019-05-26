@@ -9,7 +9,9 @@ Założenia:
 - cBird
 - cObstacle
 
-
+### Sterowanie
+- Poziom I - przyciskanie spacji powoduje podskakiwanie tytułowego ptaka. Gracz powinien podskakiwać w taki sposób by nie doprowadzić do kolizi z przeszkodami.
+- Poziom II -  
 Dodać: sterowanie, instrukcja sterowania
 Do środy:opis
 Do poniedziałku: pliki nagłówkowe
