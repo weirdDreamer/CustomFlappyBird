@@ -4,7 +4,7 @@ cBird::cBird()
 {}
 cBird::cBird(float f_x, float f_y, float f_s, float f_vX, float f_vY, float f_a) :f_size(f_s), f_velX(f_vX), f_velY(f_vY), f_acc(f_a)
 {
-	v_vel = { f_velX, f_velY};
+	v_vel = { f_velX, f_velY };
 	shape.setPosition(f_x, f_y);
 	shape.setSize({ f_size,f_size });
 	shape.setFillColor(Color::Yellow);
@@ -12,7 +12,7 @@ cBird::cBird(float f_x, float f_y, float f_s, float f_vX, float f_vY, float f_a)
 }
 void cBird::update()
 {
-	v_vel.y = v_vel.y - f_acc;
+	v_vel.y = v_vel.y + f_acc;
 	shape.move(v_vel);
 }
 void cBird::draw(RenderTarget &target, RenderStates state) const
@@ -28,17 +28,17 @@ float cBird::edgeLeft()
 {
 	return shape.getPosition().x - f_size / 2;
 }
-float cBird:: edgeRight()
+float cBird::edgeRight()
 {
-	return shape.getPosition().x + f_size/2;
+	return shape.getPosition().x + f_size / 2;
 }
 float cBird::edgeTop()
 {
-	return shape.getPosition().y - f_size/2;
+	return shape.getPosition().y - f_size / 2;
 }
 float cBird::edgeBottom()
 {
-	return shape.getPosition().y + f_size/2;
+	return shape.getPosition().y + f_size / 2;
 }
 FloatRect cBird::getGlobalBounds()
 {

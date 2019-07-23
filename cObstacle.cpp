@@ -4,11 +4,11 @@ cObstacle::cObstacle()
 {}
 cObstacle::cObstacle(float f_x, float f_y, float f_w, float f_h, float f_vX, float f_vY) :f_width(f_w), f_height(f_h), f_velX(f_vX), f_velY(f_vY)
 {
-	v_vel = { f_velX, f_velY};
+	v_vel = { f_velX, f_velY };
 	shape.setPosition(f_x, f_y);
 	shape.setSize({ f_width,f_height });
 	shape.setFillColor(Color::Red);
-	shape.setOrigin(0,0);
+	shape.setOrigin(0, 0);
 }
 void cObstacle::update()
 {
@@ -29,18 +29,17 @@ float cObstacle::edgeLeft()
 }
 float cObstacle::edgeTop()
 {
-	return shape.getPosition().y ;
+	return shape.getPosition().y;
 }
 float cObstacle::edgeBottom()
 {
-	return shape.getPosition().y-f_height;
+	return shape.getPosition().y - f_height;
 }
 float cObstacle::edgeRight()
 {
-	return shape.getPosition().x-f_width;
+	return shape.getPosition().x - f_width;
 }
 FloatRect cObstacle::getGlobalBounds()
-
 {
 	return shape.getGlobalBounds();
 }

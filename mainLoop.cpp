@@ -2,7 +2,7 @@
 
 int main()
 {
-	cStage stage;	
+	cStage stage;
 	while (true)
 	{
 		stage.keyClickReaction();

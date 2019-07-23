@@ -5,7 +5,7 @@
 
 using namespace sf;
 
-class cBird:
+class cBird :
 	public Drawable
 {
 private:
@@ -23,7 +23,7 @@ public:
 	void update();
 	void setVel(float f_vX, float f_vY);
 	float edgeRight();
-	float edgeLeft(); 
+	float edgeLeft();
 	float edgeTop();
 	float edgeBottom();
 	FloatRect getGlobalBounds();

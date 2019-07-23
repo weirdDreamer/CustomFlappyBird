@@ -5,7 +5,7 @@
 
 using namespace sf;
 
-class cObstacle:
+class cObstacle :
 	public Drawable
 {
 private:

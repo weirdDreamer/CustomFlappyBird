@@ -2,9 +2,9 @@
 
 
 
-cStage::cStage():b_gameStatus(false), i_score(0), i_lvl(0)
+cStage::cStage() :b_gameStatus(false), i_score(0), i_lvl(0)
 {
-	bird = new cBird(960, 540, 50, 0, 5, 0.01f);
+	bird = new cBird(960, 540, 50, 0, -5, 0.05);
 	srand(time(NULL));
 	window.setFramerateLimit(60);
 }
@@ -29,7 +29,7 @@ void cStage::keyClickReaction()
 		{
 			b_gameStatus = true;
 		}
-		bird->setVel(5,0);
+		bird->setVel(5, 0);
 	}
 }
 void cStage::update()
@@ -61,7 +61,7 @@ bool cStage::isClosed()
 }
 bool cStage::isColision()
 {
-	for(auto itr : v_obstaclesLVL1)
+	for (auto itr : v_obstaclesLVL1)
 	{
 		if (bird->getGlobalBounds().intersects(itr.first->getGlobalBounds()) || bird->getGlobalBounds().intersects(itr.second->getGlobalBounds()))
 		{
@@ -70,5 +70,3 @@ bool cStage::isColision()
 	}
 	return false;
 }
-
-
