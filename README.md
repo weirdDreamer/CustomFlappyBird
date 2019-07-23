@@ -17,5 +17,3 @@ Założenia:
 - Poziom II - przycicki D i S powodują przesuwanie ptaka odpowiednio prawo i lewo. Gracz powinien podskakiwać w taki sposób by nie doprowadzić do kolizi z przeszkodami.
 
 <img src="images/WP_20190526_22_33_02_Rich.jpg">
-
-Do poniedziałku: pliki nagłówkowe
