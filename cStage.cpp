@@ -54,7 +54,7 @@ void cStage::keyClickReaction()
 {
 	if (Keyboard::isKeyPressed(Keyboard::Key::Space))
 	{
-		if (b_gameStatus == false)
+		if (b_gameStatus == false && v_obstaclesLVL1.empty())
 		{
 			b_gameStatus = true;
 		}
@@ -78,7 +78,7 @@ void cStage::update()
 		itr.first->update();
 		itr.second->update();
 	}
-	window.clear(Color::Blue);
+	window.clear(Color::Cyan);
 	window.pollEvent(event);
 	window.draw(*bird);
 	for (auto itr : v_obstaclesLVL1)
@@ -105,17 +105,23 @@ void cStage::isColision()
 		{
 			case 0:
 			{
-				if (v_obstaclesLVL1.back().first->edgeRight() < 1700)
+				for (auto itr : v_obstaclesLVL1)
 				{
-					for (auto itr : v_obstaclesLVL1)
+					if (bird->getGlobalBounds().intersects(itr.first->getGlobalBounds()) || bird->getGlobalBounds().intersects(itr.second->getGlobalBounds()))
 					{
-						if (bird->getGlobalBounds().intersects(itr.first->getGlobalBounds()) || bird->getGlobalBounds().intersects(itr.second->getGlobalBounds()))
+						b_gameStatus = false;
+						for (auto itr : v_obstaclesLVL1)
 						{
-							b_gameStatus = false;
+							delete itr.first;
+							delete itr.second;
 						}
+						v_obstaclesLVL1.clear();
+						bird->setVel(0, 0);
+						bird->setAcc(0);
+						bird->setPosition(960, 540);
 					}
-					break;
 				}
+				break;
 			}
 			case 1:
 			{
@@ -123,4 +129,38 @@ void cStage::isColision()
 			}
 		}
 	}
+	
+	if (bird->edgeBottom() > 1080)
+	{
+		b_gameStatus = false;
+	}
+}
+void cStage::pointsCounting()
+{
+	if (b_gameStatus)
+	{
+		switch (i_lvl)
+		{
+		case 0:
+		{
+			for (auto itr : v_obstaclesLVL1)
+			{
+				if (bird->edgeRight() > itr.first->edgeLeft() && (!itr.first->isCounted()|| !itr.second->isCounted()))
+				{
+
+					i_score++;
+					itr.first->passed(true);
+					itr.second->passed(true);
+					cout << i_score << endl;
+				}
+			}
+			break;
+		}
+		case 1:
+		{
+			break;
+		}
+		}
+	}
+
 }

@@ -21,6 +21,7 @@ public:
 	void update();
 	void setAcc(float f_a);
 	void setVel(float f_vX, float f_vY);
+	void setPosition(float f_x, float f_y);
 	float edgeRight();
 	float edgeLeft();
 	float edgeTop();

@@ -32,6 +32,7 @@ public:
 	void update();
 	void keyClickReaction();
 	void isColision();
+	void pointsCounting();
 	bool isClosed();
 };
 #endif //STAGE

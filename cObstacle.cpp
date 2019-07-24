@@ -2,7 +2,7 @@
 
 cObstacle::cObstacle()
 {}
-cObstacle::cObstacle(float f_x, float f_y, float f_w, float f_h, float f_vX, float f_vY) :f_width(f_w), f_height(f_h), f_velX(f_vX), f_velY(f_vY)
+cObstacle::cObstacle(float f_x, float f_y, float f_w, float f_h, float f_vX, float f_vY) :f_width(f_w), f_height(f_h), f_velX(f_vX), f_velY(f_vY), b_status(false)
 {
 	v_vel = { f_velX, f_velY };
 	shape.setPosition(f_x, f_y);

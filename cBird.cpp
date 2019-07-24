@@ -27,6 +27,10 @@ void cBird::setVel(float f_vX, float f_vY)
 	v_vel.x = f_vX;
 	v_vel.y = f_vY;
 }
+void cBird::setPosition(float f_x, float f_y)
+{
+	shape.setPosition(f_x, f_y);
+}
 float cBird::edgeLeft()
 {
 	return shape.getPosition().x - f_size / 2;

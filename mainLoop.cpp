@@ -7,6 +7,8 @@ int main()
 	{
 		stage.keyClickReaction();
 		stage.obctaclesGeneration();
+		stage.isColision();
+		stage.pointsCounting();
 		stage.update();
 		if (stage.isClosed())
 		{
