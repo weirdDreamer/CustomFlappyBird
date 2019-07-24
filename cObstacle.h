@@ -10,6 +10,7 @@ class cObstacle :
 {
 private:
 	RectangleShape shape;
+	bool b_status;
 	float f_width;
 	float f_height;
 	float f_velX;
@@ -23,6 +24,8 @@ public:
 	~cObstacle() = default;
 	void update();
 	void setVel(float f_vX, float f_vY);
+	void passed(bool b_newStatus);
+	bool isCounted();
 	float edgeLeft();
 	float edgeTop();
 	float edgeBottom();

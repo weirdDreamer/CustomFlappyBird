@@ -28,9 +28,10 @@ private:
 public:
 	cStage();
 	~cStage();
+	void obctaclesGeneration();
 	void update();
 	void keyClickReaction();
-	bool isColision();
+	void isColision();
 	bool isClosed();
 };
 #endif //STAGE

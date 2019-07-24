@@ -6,10 +6,11 @@ int main()
 	while (true)
 	{
 		stage.keyClickReaction();
+		stage.obctaclesGeneration();
 		stage.update();
 		if (stage.isClosed())
 		{
-			exit(0);
+			break;
 		}
 	}
 	return 0;

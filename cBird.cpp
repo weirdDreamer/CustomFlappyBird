@@ -2,9 +2,8 @@
 
 cBird::cBird()
 {}
-cBird::cBird(float f_x, float f_y, float f_s, float f_vX, float f_vY, float f_a) :f_size(f_s), f_velX(f_vX), f_velY(f_vY), f_acc(f_a)
+cBird::cBird(float f_x, float f_y, float f_s) :f_size(f_s), f_acc(0), v_vel({ 0, 0 })
 {
-	v_vel = { f_velX, f_velY };
 	shape.setPosition(f_x, f_y);
 	shape.setSize({ f_size,f_size });
 	shape.setFillColor(Color::Yellow);
@@ -19,10 +18,14 @@ void cBird::draw(RenderTarget &target, RenderStates state) const
 {
 	target.draw(shape, state);
 }
+void cBird::setAcc(float f_a)
+{
+	f_acc = f_a;
+}
 void cBird::setVel(float f_vX, float f_vY)
 {
-	f_velX = f_vX;
-	f_velY = f_vY;
+	v_vel.x = f_vX;
+	v_vel.y = f_vY;
 }
 float cBird::edgeLeft()
 {
